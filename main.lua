@@ -1,6 +1,12 @@
 -- quick note, ronaldo is the goat.
 local Lib = {}
 
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("UiLib") then
+    print("Already existing UiLibrary discovered. Reloading the library...")
+    game.Players.LocalPlayer.PlayerGui:FindFirstChild("UiLib"):Destroy()
+    print("Library reloaded successfully!")
+end
+
 local tweenService = game:GetService("TweenService")
 local UIS = game:GetService("UserInputService")
 
